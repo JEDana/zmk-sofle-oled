@@ -1,5 +1,7 @@
 build/
 zmk/
 modules/
-tools/
+tools/*
+!tools/extract_zmk_studio_keymap.py
+tools/__pycache__/
 .west/
