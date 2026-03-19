@@ -53,7 +53,8 @@
         Macro1: Macro1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&none>, <&macro_press>;
+
             label = "MACRO1";
         };
     };
@@ -76,10 +77,10 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10           &trans
-&trans      &kp F13          &kp UP_ARROW    &kp F14          &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp KP_N7        &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS         &kp EQUAL
-&trans      &kp LEFT         &kp DOWN_ARROW  &kp RIGHT        &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp KP_NUMBER_4  &kp N5           &kp KP_N6        &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp F12           &trans
+&kp GRAVE   &trans           &trans          &trans           &trans           &trans             &mmv MOVE_UP     &kp KP_NUMLOCK   &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp KP_MULTIPLY  &kp KP_MINUS  &trans
+&trans      &kp F13          &kp UP_ARROW    &kp F14          &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp KP_N7        &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS   &kp EQUAL
+&trans      &kp LEFT         &kp DOWN_ARROW  &kp RIGHT        &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp KP_NUMBER_4  &kp N5           &kp KP_N6        &trans        &trans
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &trans
 &kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &kp KP_NUMBER_0  &kp KP_NUMBER_0  &trans           &trans
             >;
 
@@ -89,11 +90,11 @@
 
         layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+&kp TILDE     &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &trans  &trans  &trans      &kp MINUS         &kp EQUAL          &trans
+&out OUT_TOG  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &trans      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&kp F1        &kp F2        &kp F3          &kp F4        &kp F5        &kp F6          &mmv MOVE_LEFT   &kp F7  &kp F8  &kp F9      &kp F10           &kp F11            &kp F12
+&trans        &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off         &bootloader        &trans
+&trans        &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans            &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
