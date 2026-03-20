@@ -2,8 +2,16 @@ include:
   - board: eyelash_nano
     shield: eyelash_sofle_right nice_oled
   - board: eyelash_nano
+    shield: eyelash_sofle_right nice_oled
+    artifact-name: eyelash-sofle-right-diagnostic
+    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_RGB_UNDERGLOW=n -DCONFIG_WS2812_STRIP=n -DCONFIG_ZMK_BACKLIGHT=n
+  - board: eyelash_nano
     shield: eyelash_sofle_left nice_oled
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+  - board: eyelash_nano
+    shield: eyelash_sofle_left nice_oled
+    artifact-name: eyelash-sofle-left-diagnostic
+    cmake-args: -DCONFIG_ZMK_DISPLAY=n -DCONFIG_ZMK_RGB_UNDERGLOW=n -DCONFIG_WS2812_STRIP=n -DCONFIG_ZMK_BACKLIGHT=n -DCONFIG_ZMK_STUDIO=n -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=n -DCONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_PROXY=n
   - board: eyelash_nano
     shield: settings_reset
